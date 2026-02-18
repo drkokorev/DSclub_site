@@ -12,6 +12,10 @@
   --transition: 200ms ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html[data-theme="light"] {
   --bg: #f2f2f2;
   --bg-strong: #fafafa;
@@ -249,23 +253,36 @@ input {
 .stat {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  gap: 16px;
 }
 
 .stat__value {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .stat__label {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.hero__card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.section--anchor {
+  scroll-margin-top: 110px;
 }
 
 .section__header h2 {
@@ -388,7 +405,6 @@ input {
 .footer__links {
   display: flex;
   gap: 16px;
-  text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
 }

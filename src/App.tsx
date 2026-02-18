@@ -3,7 +3,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Events from "./pages/Events";
-import Rating from "./pages/Rating";
+import AboutTeam from "./pages/AboutTeam";
 import Profile from "./pages/Profile";
 import Materials from "./pages/Materials";
 
@@ -33,7 +33,7 @@ export default function App() {
         <div className="brand">
           <span className="brand__badge">DS</span>
           <div className="brand__text">
-            <div className="brand__title">DS club.community</div>
+            <div className="brand__title">REU DS Club</div>
             <div className="brand__subtitle">data science • community • growth</div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function App() {
           </NavLink>
           <NavLink to="/news">Новости</NavLink>
           <NavLink to="/events">События</NavLink>
-          <NavLink to="/rating">Рейтинг</NavLink>
+          <NavLink to="/about-team">О команде</NavLink>
           <NavLink to="/materials">Материалы</NavLink>
         </nav>
 
@@ -71,18 +71,27 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<News />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/rating" element={<Rating />} />
+          <Route path="/about-team" element={<AboutTeam />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/materials" element={<Materials />} />
         </Routes>
       </main>
 
       <footer className="footer">
-        <div>DS club.community — объединяем практиков и будущих специалистов.</div>
+        <div>REU DS Club — объединяем практиков и будущих специалистов.</div>
         <div className="footer__links">
-          <span>discord</span>
-          <span>telegram</span>
-          <span>email</span>
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href="https://stepik.org" target="_blank" rel="noreferrer">
+            Stepik
+          </a>
+          <a href="https://t.me" target="_blank" rel="noreferrer">
+            Telegram
+          </a>
+          <a href="https://vk.com" target="_blank" rel="noreferrer">
+            VK
+          </a>
         </div>
       </footer>
     </div>
