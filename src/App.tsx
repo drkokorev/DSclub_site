@@ -39,13 +39,39 @@ export default function App() {
         </div>
 
         <nav className="nav">
-          <NavLink to="/" end>
+          <NavLink className="nav__toplink" to="/" end>
             Главная
           </NavLink>
-          <NavLink to="/news">Новости</NavLink>
-          <NavLink to="/events">События</NavLink>
-          <NavLink to="/about-team">О команде</NavLink>
-          <NavLink to="/materials">Материалы</NavLink>
+          <NavLink className="nav__toplink" to="/news">
+            Новости
+          </NavLink>
+          <NavLink className="nav__toplink" to="/events">
+            События
+          </NavLink>
+          <NavLink className="nav__toplink" to="/about-team">
+            О команде
+          </NavLink>
+          <div className="nav__dropdown">
+            <NavLink className="nav__toplink" to="/materials">
+              Материалы
+            </NavLink>
+            <div className="nav-dropdown-menu">
+              <button className="nav-dropdown-menu__item">Записи лекций</button>
+              <button className="nav-dropdown-menu__item">Месяц бота</button>
+              <button className="nav-dropdown-menu__item">Курсы</button>
+              <button className="nav-dropdown-menu__item">ML roadmap</button>
+              <div className="nav-dropdown-menu__item nav-dropdown-menu__item--has-sub">
+                <button className="nav-dropdown-menu__trigger">База знаний ▸</button>
+                <div className="nav-submenu">
+                  <button className="nav-dropdown-menu__item">ML</button>
+                  <button className="nav-dropdown-menu__item">Python</button>
+                  <button className="nav-dropdown-menu__item">SQL</button>
+                  <button className="nav-dropdown-menu__item">Математика</button>
+                  <button className="nav-dropdown-menu__item">Другое</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
 
         <div className="header__actions">
